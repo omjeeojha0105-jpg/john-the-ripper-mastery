@@ -1,121 +1,130 @@
-<!-- ======================================================= -->
-<!--             JOHN THE RIPPER MASTERY                    -->
-<!-- ======================================================= -->
+ <div align="center">
 
-<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,20:064E3B,45:7C2D12,70:581C87,100:0D1117&height=240&section=header&text=JOHN%20THE%20RIPPER&fontSize=43&fontColor=FFFFFF&animation=fadeIn&fontAlignY=35&desc=CYBERSECURITY%20%7C%20PASSWORD%20AUDITING%20%7C%20ETHICAL%20HACKING&descSize=13&descAlignY=58" width="100%"/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:050505,30:10152B,60:00BFFF,100:050505&height=220&section=header&text=JOHN%20THE%20RIPPER&fontSize=48&fontColor=00F7FF&animation=fadeIn&fontAlignY=38&desc=PASSWORD%20AUDITING%20%7C%20HASH%20ANALYSIS%20%7C%20CYBERSECURITY&descSize=13&descAlignY=60&stroke=00F7FF&strokeWidth=1" width="100%" />
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=19&duration=2500&pause=900&color=00F7FF&center=true&vCenter=true&width=750&lines=ACCESSING+PASSWORD+SECURITY+LAB...;INITIALIZING+JOHN+THE+RIPPER...;ANALYZE.+AUDIT.+UNDERSTAND.+SECURE.;FROM+BEGINNER+TO+ADVANCED." />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=19&duration=2500&pause=900&color=00FF88&center=true&vCenter=true&width=800&lines=INITIALIZING+CYBERSECURITY+LAB...;ANALYZING+PASSWORD+SECURITY...;JOHN+THE+RIPPER+%7C+HASH+AUDITING;LEARN+%7C+PRACTICE+%7C+SECURE" />
 
 <br/>
 
-<img src="https://img.shields.io/badge/PROJECT-PASSWORD%20AUDITING-00F7FF?style=for-the-badge&labelColor=050505"/>
-<img src="https://img.shields.io/badge/LEVEL-BEGINNER%20%2F%20ADVANCED-8A2BE2?style=for-the-badge&labelColor=050505"/>
-<img src="https://img.shields.io/badge/PLATFORM-KALI%20LINUX-00FF88?style=for-the-badge&labelColor=050505"/>
+<img src="https://img.shields.io/badge/CYBERSECURITY-RESEARCH-00FF88?style=for-the-badge&labelColor=0D1117"/>
+<img src="https://img.shields.io/badge/PASSWORD-AUDITING-FF00FF?style=for-the-badge&labelColor=0D1117"/>
+<img src="https://img.shields.io/badge/TOOL-JOHN%20THE%20RIPPER-A855F7?style=for-the-badge&labelColor=0D1117"/>
+<img src="https://img.shields.io/badge/LEVEL-BEGINNER%20TO%20ADVANCED-FF6B35?style=for-the-badge&labelColor=0D1117"/>
 
 <br/><br/>
 
-**A HANDS-ON JOURNEY INTO PASSWORD SECURITY & HASH AUDITING**
+<img src="https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif" width="75%"/>
 
-*Breaking down password security, one hash at a time.*
+### 🔐 PASSWORD SECURITY • HASH ANALYSIS • ETHICAL HACKING
+
+**Understand the Hash. Analyze the Weakness. Strengthen the Defense.**
 
 </div>
 
 ---
 
-## `01 // SYSTEM OVERVIEW`
+# 🟢 01. ABOUT THIS PROJECT
 
-> [!IMPORTANT]
-> This repository documents my practical journey of mastering **John the Ripper**, from fundamental concepts to advanced password auditing techniques.
+Welcome to my **John the Ripper Mastery** repository!
 
-John the Ripper is a powerful password security auditing tool used to identify weak passwords through various password-candidate generation and hash-comparison techniques.
+This repository documents my hands-on journey of learning John the Ripper, a powerful password security auditing tool used to assess password strength and identify weak password practices.
 
-### MISSION OBJECTIVES
+🎯 **My Learning Objectives**
 
-- Understand password hashing and authentication security.
-- Identify different hash formats.
-- Master dictionary and wordlist attacks.
-- Explore rule-based and incremental attacks.
-- Understand mask-based password generation.
-- Perform practical password security assessments.
-- Analyze results and document security weaknesses.
+- 🔍 Understand password hashing and authentication.
+- 🧬 Identify and analyze different hash formats.
+- 📚 Master dictionary and wordlist attacks.
+- ⚙️ Understand rule-based password mutations.
+- 🎯 Learn mask and incremental attacks.
+- 🧪 Perform practical password auditing labs.
+- 📊 Analyze cracking performance and results.
+- 🛡️ Understand password security and defensive practices.
+
+> ⚠️ All practical exercises are performed on self-created hashes, owned systems, or explicitly authorized labs.
 
 ---
 
-## `02 // CYBERSECURITY VISUALIZATION`
+# 🟣 02. HOW PASSWORD CRACKING WORKS
 
-<div align="center">
-
-<img src="https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif" width="85%" />
-
-<br/><br/>
-
-### THE PASSWORD AUDITING PIPELINE
-
-</div>
+Understanding the underlying process is more important than memorizing commands.
 
 ```text
-             ┌──────────────────────┐
-             │  AUTHORIZED HASH     │
-             └──────────┬───────────┘
-                        │
-                        ▼
-             ┌──────────────────────┐
-             │   HASH IDENTIFICATION│
-             └──────────┬───────────┘
-                        │
-                        ▼
-             ┌──────────────────────┐
-             │ JOHN THE RIPPER      │
-             └──────────┬───────────┘
-                        │
-          ┌─────────────┼─────────────┐
-          ▼             ▼             ▼
-      DICTIONARY       RULES         MASKS
-          │             │             │
-          └─────────────┼─────────────┘
-                        ▼
-                HASH COMPARISON
-                        │
-                 ┌──────┴──────┐
-                 ▼             ▼
-              MATCH         NO MATCH
-                 │             │
-                 ▼             ▼
-             ANALYSIS      REVIEW
-                 │
-                 ▼
-          SECURITY REPORT
+       🔐 ORIGINAL PASSWORD
+                |
+                ▼
+        🧬 HASH GENERATION
+                |
+                ▼
+          🔎 HASH FILE
+                |
+                ▼
+       ⚡ JOHN THE RIPPER
+                |
+       ┌────────┼────────┐
+       ▼        ▼        ▼
+    📚 WORDLIST ⚙️ RULES 🎯 MASKS
+       |        |        |
+       └────────┼────────┘
+                ▼
+        🔬 HASH COMPARISON
+                |
+          ┌─────┴─────┐
+          ▼           ▼
+       ✅ MATCH    ❌ NO MATCH
+          |           |
+          ▼           ▼
+      📖 ANALYSIS   🔄 CONTINUE
+          |
+          ▼
+     🛡️ SECURITY REPORT
 ```
+
+### 🔬 Hashing vs Encryption
+
+| 🔐 Hashing | 🔒 Encryption |
+|---|---|
+| One-way operation | Reversible with key |
+| No decryption key | Requires decryption key |
+| Password storage | Data confidentiality |
+| SHA-256 | AES |
 
 ---
 
-## `03 // INSTALLATION & ENVIRONMENT`
+# 🟠 03. ENVIRONMENT SETUP
 
-**Operating Environment:** Kali Linux
+### 💻 Install John the Ripper
 
 ```bash
 sudo apt update
 sudo apt install john -y
 ```
 
-Verify installation:
+### 🔍 Verify Installation
 
 ```bash
 john --version
 john --help
+```
+
+### 📋 Explore Supported Formats
+
+```bash
 john --list=formats
+```
+
+### ⚙️ Check Build Information
+
+```bash
 john --list=build-info
 ```
 
-Prepare RockYou:
+### 📚 Prepare RockYou Wordlist
 
 ```bash
 sudo gzip -dk /usr/share/wordlists/rockyou.txt.gz
 ```
 
-Verify:
+Check:
 
 ```bash
 ls -lh /usr/share/wordlists/
@@ -123,99 +132,104 @@ ls -lh /usr/share/wordlists/
 
 ---
 
-## `04 // BEGINNER LEVEL — CORE OPERATIONS`
+# 🟢 04. BEGINNER LEVEL — CORE FUNDAMENTALS
 
-### 01. Generate a SHA-256 Hash
+### 🧬 4.1 Generate Your First Hash
 
 ```bash
 echo -n "hello123" | sha256sum
 ```
 
-### 02. Prepare a Hash File
+### 📁 4.2 Create a Hash File
 
 ```bash
 echo "PASTE_HASH_HERE" > hash.txt
 ```
 
-### 03. Dictionary Attack
+### 📚 4.3 Dictionary Attack
 
 ```bash
 john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 ```
 
-### 04. Display Recovered Passwords
+### 🔓 4.4 Display Recovered Password
 
 ```bash
 john --show hash.txt
 ```
 
-### 05. Specify Hash Format
+### 🎯 4.5 Specify Hash Format
 
 ```bash
 john --format=Raw-SHA256 --wordlist=rockyou.txt hash.txt
 ```
 
-### 06. Explore Supported Formats
+### 🔍 4.6 Explore Available Formats
 
 ```bash
 john --list=formats
 ```
 
+**🎯 Learning Goal:** Understand hash input, formats, wordlists, and the basic password auditing workflow.
+
 ---
 
-## `05 // INTERMEDIATE LEVEL — ATTACK TECHNIQUES`
+# 🟡 05. INTERMEDIATE LEVEL — ATTACK TECHNIQUES
 
-<div align="center">
+## 📚 5.1 Dictionary Attack
 
-<img src="https://img.shields.io/badge/01-DICTIONARY_ATTACK-00F7FF?style=flat-square"/>
-<img src="https://img.shields.io/badge/02-RULE_BASED_ATTACK-8A2BE2?style=flat-square"/>
-<img src="https://img.shields.io/badge/03-INCREMENTAL-FF00FF?style=flat-square"/>
-<img src="https://img.shields.io/badge/04-MASK_ATTACK-00FF88?style=flat-square"/>
-
-</div>
-
-### Dictionary Attack
+Tests candidate passwords from a wordlist.
 
 ```bash
 john --wordlist=rockyou.txt hash.txt
 ```
 
-### Single Crack Mode
+## 👤 5.2 Single Crack Mode
+
+Uses account information and associated fields to generate password candidates.
 
 ```bash
 john --single hash.txt
 ```
 
-### Rule-Based Attack
+## ⚙️ 5.3 Rule-Based Attack
+
+Modifies dictionary words to generate password variations.
 
 ```bash
 john --wordlist=rockyou.txt --rules hash.txt
 ```
 
-### Incremental Mode
+Example transformations:
+
+```text
+password
+Password
+password123
+Password123
+p@ssword
+```
+
+## 🔄 5.4 Incremental Attack
+
+Generates character combinations according to the selected incremental configuration.
 
 ```bash
 john --incremental hash.txt
 ```
 
-### Mask-Based Attack
+## 🎯 5.5 Mask-Based Attack
+
+Useful when the password structure is known.
 
 ```bash
 john --mask='?d?d?d?d' hash.txt
 ```
 
-### Session Management
+### 🎨 Mask Character Reference
 
-```bash
-john --session=my_lab hash.txt
-john --status=my_lab
-john --restore=my_lab
-```
-
-### Mask Character Reference
-
-| Symbol | Character Set |
-|:---:|---|
+| Symbol | Meaning |
+|---|---|
 | `?l` | Lowercase letters |
 | `?u` | Uppercase letters |
 | `?d` | Digits |
@@ -224,186 +238,281 @@ john --restore=my_lab
 | `?h` | Lowercase hexadecimal |
 | `?H` | Uppercase hexadecimal |
 
+Example:
+
+```bash
+john --mask='?u?l?l?l?d?d' hash.txt
+```
+
+## 💾 5.6 Session Management
+
+Start a named session:
+
+```bash
+john --session=my_lab hash.txt
+```
+
+Check status:
+
+```bash
+john --status=my_lab
+```
+
+Restore:
+
+```bash
+john --restore=my_lab
+```
+
+## 📊 5.7 Display Results
+
+```bash
+john --show hash.txt
+```
+
+**🎯 Learning Goal:** Master password candidate generation, attack strategies, masks, and session management.
+
 ---
 
-## `06 // ADVANCED LEVEL — DEEP DIVE`
+# 🔴 06. ADVANCED LEVEL — PROFESSIONAL PASSWORD AUDITING
 
-**Advanced topics under investigation:**
+## 🧬 6.1 Hash Identification & Analysis
 
-| Domain | Topics |
+Study these formats and their security characteristics:
+
+| Hash / Format | Application |
 |---|---|
-| Hash Analysis | MD5, SHA-1, SHA-256, SHA-512 |
-| Password Storage | bcrypt, Linux crypt, NTLM |
-| Rule Engine | Custom rules, transformations |
-| Candidate Generation | Incremental, masks, external mode |
-| Performance | Benchmarking, CPU/GPU considerations |
-| File Auditing | PDF, ZIP, Office formats |
-| Jumbo Edition | Extended formats and capabilities |
-| Reporting | Findings, evidence, recommendations |
+| MD5 | Legacy hashing |
+| SHA-1 | Legacy cryptographic hashing |
+| SHA-256 | General-purpose hashing |
+| SHA-512 | General-purpose hashing |
+| bcrypt | Password hashing |
+| NTLM | Windows authentication |
+| Linux crypt | Unix/Linux password storage |
+| PDF formats | Document password auditing |
+| ZIP formats | Archive password auditing |
 
-### Benchmarking
+> ⚠️ A hash-looking string does not always reveal its exact algorithm. Confirm the format using reliable identification and source context.
+
+## ⚙️ 6.2 Custom Rule-Based Attacks
+
+Explore:
+
+- 🔠 Character transformations
+- 🔄 Case modifications
+- ➕ Append and prepend operations
+- 🔁 Character duplication
+- 🎭 Character substitutions
+- 🧠 Custom password mutation strategies
 
 ```bash
-john --test
+john --wordlist=rockyou.txt --rules hash.txt
 ```
 
-```bash
-john --test --format=Raw-SHA256
-```
-
-### Custom Character Set
-
-```bash
-john --mask='?1?1?1?1' --1='abc123' hash.txt
-```
-
-### Inspect Rules
+Explore available rules:
 
 ```bash
 john --list=rules
 ```
 
+## 🎯 6.3 Custom Character Sets
+
+Understand custom character classes and mask configuration.
+
+```bash
+john --mask='?1?1?1?1' --1='abc123' hash.txt
+```
+
+## 🚀 6.4 Performance Benchmarking
+
+```bash
+john --test
+```
+
+Specific format:
+
+```bash
+john --test --format=Raw-SHA256
+```
+
+Study:
+
+- ⚡ Hashes per second
+- 🧠 CPU utilization
+- 🎮 GPU support and limitations
+- 📊 Algorithm performance
+- 💾 Memory requirements
+
+## 🧪 6.5 External Mode
+
+Explore custom candidate-generation logic.
+
+Topics:
+
+- External mode syntax
+- Candidate generation
+- Character filtering
+- Custom password policies
+
+## 🔥 6.6 Jumbo Edition
+
+Explore extended features:
+
+- Additional hash formats
+- PDF password auditing
+- ZIP password auditing
+- Office document formats
+- SSH-related formats
+- Extended plugins and capabilities
+
 ---
 
-## `07 // ATTACK WORKFLOW — VISUAL MAP`
+# 🧪 07. PRACTICAL LABS & CHALLENGES
+
+| Lab | Practical Exercise | Level |
+|---|---|---|
+| 01 | Generate Your First Hash | 🟢 Beginner |
+| 02 | Crack a SHA-256 Test Hash | 🟢 Beginner |
+| 03 | RockYou Wordlist | 🟢 Beginner |
+| 04 | Hash Format Selection | 🟢 Beginner |
+| 05 | Dictionary Attack | 🟡 Intermediate |
+| 06 | Single Crack Mode | 🟡 Intermediate |
+| 07 | Rule-Based Attack | 🟡 Intermediate |
+| 08 | Incremental Attack | 🟡 Intermediate |
+| 09 | Mask-Based Attack | 🟡 Intermediate |
+| 10 | Session Restoration | 🟡 Intermediate |
+| 11 | PDF Password Auditing | 🔴 Advanced |
+| 12 | ZIP Password Auditing | 🔴 Advanced |
+| 13 | Custom Rule Development | 🔴 Advanced |
+| 14 | Performance Benchmarking | 🔴 Advanced |
+| 15 | Complete Password Security Audit | 🔴 Advanced |
+
+---
+
+# 🧠 08. COMPLETE PASSWORD AUDITING WORKFLOW
 
 ```mermaid
 flowchart TD
-    A(["START"]) --> B["Obtain Authorized Hash"]
+    A(["🔐 START"]) --> B["Obtain Authorized Hash"]
     B --> C["Identify Hash Format"]
     C --> D["Prepare Hash File"]
     D --> E{"Select Attack Strategy"}
-    E --> F["Dictionary Attack"]
-    E --> G["Rule-Based Attack"]
-    E --> H["Mask Attack"]
-    E --> I["Incremental Attack"]
-    F --> J["Analyze Results"]
+    E --> F["📚 Dictionary Attack"]
+    E --> G["⚙️ Rule-Based Attack"]
+    E --> H["🎯 Mask Attack"]
+    E --> I["🔄 Incremental Attack"]
+    F --> J["🔬 Analyze Results"]
     G --> J
     H --> J
     I --> J
     J --> K{"Password Recovered?"}
-    K -->|YES| L["Document Findings"]
-    K -->|NO| M["Review Strategy"]
+    K -->|Yes| L["📊 Document Findings"]
+    K -->|No| M["🔄 Review Strategy"]
     M --> E
-    L --> N["Security Recommendations"]
-    N --> O(["END"])
+    L --> N["🛡️ Security Recommendations"]
+    N --> O(["✅ END"])
 ```
 
 ---
 
-## `08 // PRACTICAL LABS & CHALLENGES`
-
-| ID | Practical Exercise | Level |
-|:---:|---|:---:|
-| 01 | Generate Your First Hash | Beginner |
-| 02 | Basic SHA-256 Auditing | Beginner |
-| 03 | RockYou Wordlist | Beginner |
-| 04 | Hash Format Selection | Beginner |
-| 05 | Dictionary Attacks | Intermediate |
-| 06 | Single Crack Mode | Intermediate |
-| 07 | Rule-Based Attacks | Intermediate |
-| 08 | Incremental Attacks | Intermediate |
-| 09 | Mask-Based Attacks | Intermediate |
-| 10 | Session Restoration | Intermediate |
-| 11 | PDF Password Auditing | Advanced |
-| 12 | ZIP Password Auditing | Advanced |
-| 13 | Custom Rule Development | Advanced |
-| 14 | Performance Benchmarking | Advanced |
-| 15 | Complete Password Security Audit | Advanced |
-
----
-
-## `09 // COMMAND CENTER — QUICK REFERENCE`
+# 🧰 09. COMMAND CENTER — QUICK REFERENCE
 
 | Command | Function |
 |---|---|
-| `john --help` | Help menu |
-| `john --version` | Version |
-| `john --list=formats` | Supported formats |
-| `john --list=rules` | Available rules |
-| `john --wordlist=file hash.txt` | Dictionary attack |
-| `john --single hash.txt` | Single crack |
-| `john --rules hash.txt` | Rule-based attack |
-| `john --incremental hash.txt` | Incremental mode |
-| `john --mask='?d?d?d?d' hash.txt` | Mask attack |
-| `john --show hash.txt` | Display results |
-| `john --status` | Status |
-| `john --restore` | Restore session |
-| `john --test` | Benchmark |
+| `john --help` | 📖 Help menu |
+| `john --version` | ℹ️ Version |
+| `john --list=formats` | 🔍 Supported formats |
+| `john --list=rules` | ⚙️ Available rules |
+| `john --wordlist=file hash.txt` | 📚 Wordlist attack |
+| `john --single hash.txt` | 👤 Single crack |
+| `john --rules hash.txt` | 🔄 Rule-based attack |
+| `john --incremental hash.txt` | 🔢 Incremental mode |
+| `john --mask='?d?d?d?d' hash.txt` | 🎯 Mask attack |
+| `john --show hash.txt` | 🔓 Display results |
+| `john --status` | 📊 Current status |
+| `john --restore` | 💾 Restore session |
+| `john --test` | ⚡ Benchmark |
 
 ---
 
-## `10 // LEARNING PROGRESS`
+# 📈 10. MY LEARNING PROGRESS
 
-| Learning Module | Status |
+| Learning Module | Progress |
 |---|:---:|
-| Installation & Configuration | ⬜ |
-| Hash Fundamentals | ⬜ |
-| Hash Identification | ⬜ |
-| Dictionary Attacks | ⬜ |
-| Single Crack Mode | ⬜ |
-| Rule-Based Attacks | ⬜ |
-| Incremental Mode | ⬜ |
-| Mask-Based Attacks | ⬜ |
-| Session Management | ⬜ |
-| Advanced Hash Formats | ⬜ |
-| Custom Rules | ⬜ |
-| Jumbo Edition | ⬜ |
-| Practical Labs | ⬜ |
-| Security Reporting | ⬜ |
+| 🛠️ Installation & Setup | ⬜ |
+| 🧬 Hash Fundamentals | ⬜ |
+| 🔍 Hash Identification | ⬜ |
+| 📚 Dictionary Attacks | ⬜ |
+| 👤 Single Crack Mode | ⬜ |
+| ⚙️ Rule-Based Attacks | ⬜ |
+| 🔄 Incremental Attacks | ⬜ |
+| 🎯 Mask Attacks | ⬜ |
+| 💾 Session Management | ⬜ |
+| 🔬 Advanced Hash Formats | ⬜ |
+| 🧪 Custom Rules | ⬜ |
+| 🔥 Jumbo Edition | ⬜ |
+| 🧰 Practical Labs | ⬜ |
+| 🛡️ Security Reporting | ⬜ |
 
 ---
 
-## `11 // KNOWLEDGE BASE & RESOURCES`
+# 🌍 11. LEARNING RESOURCES
 
 <div align="center">
 
 <a href="https://www.openwall.com/john/">
-<img src="https://img.shields.io/badge/OPENWALL-OFFICIAL_WEBSITE-00F7FF?style=for-the-badge&logo=linux&logoColor=white"/>
+<img src="https://img.shields.io/badge/OPENWALL-OFFICIAL_WEBSITE-00FF88?style=for-the-badge"/>
 </a>
 
 <a href="https://github.com/openwall/john">
-<img src="https://img.shields.io/badge/GITHUB-SOURCE_CODE-181717?style=for-the-badge&logo=github"/>
+<img src="https://img.shields.io/badge/GITHUB-SOURCE_CODE-FF00FF?style=for-the-badge&logo=github"/>
 </a>
 
 <a href="https://www.kali.org/tools/john/">
-<img src="https://img.shields.io/badge/KALI-TOOL_DOCUMENTATION-557C94?style=for-the-badge&logo=kalilinux"/>
+<img src="https://img.shields.io/badge/KALI-LINUX_DOCUMENTATION-A855F7?style=for-the-badge&logo=kalilinux"/>
 </a>
 
 <a href="https://www.openwall.com/john/doc/">
-<img src="https://img.shields.io/badge/DOCUMENTATION-LEARN_MORE-8A2BE2?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/JOHN-DOCUMENTATION-FF6B35?style=for-the-badge"/>
+</a>
+
+<a href="https://tryhackme.com/">
+<img src="https://img.shields.io/badge/TRYHACKME-PRACTICE-00FF88?style=for-the-badge"/>
+</a>
+
+<a href="https://www.hackthebox.com/">
+<img src="https://img.shields.io/badge/HACK_THE_BOX-LABS-9D4EDD?style=for-the-badge"/>
 </a>
 
 </div>
 
 ---
 
-## `12 // PROJECT AUTHOR`
+# 👨‍💻 12. PROJECT CREATOR
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:050505,50:10152B,100:050505&height=100&text=OMJEE%20OJHA&fontSize=38&fontColor=00F7FF&animation=fadeIn&stroke=00F7FF&strokeWidth=1"/>
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:0D1117,40:064E3B,75:581C87,100:0D1117&height=150&text=OMJEE%20OJHA&fontSize=42&fontColor=FFFFFF&animation=fadeIn&desc=CYBERSECURITY%20ENTHUSIAST&descSize=15&descAlignY=75"/>
 
-### CYBERSECURITY ENTHUSIAST
+### 🔐 OMJEE OJHA
 
-**Learning | Researching | Practicing | Building**
+**Cybersecurity | Ethical Hacking | Security Research**
 
-*Focused on cybersecurity, ethical hacking, password security and practical security research.*
+🧠 Learning • 🔬 Researching • 💻 Practicing • 🛡️ Securing
 
 <br/>
 
-<img src="https://img.shields.io/badge/CREATED_BY-OMJEE_OJHA-00F7FF?style=for-the-badge&labelColor=050505"/>
-<img src="https://img.shields.io/badge/DOMAIN-CYBERSECURITY-8A2BE2?style=for-the-badge&labelColor=050505"/>
+<img src="https://img.shields.io/badge/CREATED_BY-OMJEE_OJHA-00FF88?style=for-the-badge&labelColor=0D1117"/>
+<img src="https://img.shields.io/badge/FOCUS-CYBERSECURITY-FF00FF?style=for-the-badge&labelColor=0D1117"/>
 
 <br/><br/>
 
-**"KNOW THE ATTACK. UNDERSTAND THE WEAKNESS. MASTER THE DEFENSE."**
+### ⚡ THINK LIKE AN ATTACKER. DEFEND LIKE A PROFESSIONAL.
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:050505,40:10152B,80:00BFFF,100:050505&height=120&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,25:064E3B,50:581C87,75:7C2D12,100:0D1117&height=130&section=footer"/>
 
 </div>
 
 ---
 
-> [!CAUTION]
-> **Ethical Use Only:** This repository is intended for educational purposes, password security research, and authorized security auditing. Never use these techniques against systems or password hashes without permission.</div>
+> ⚠️ **DISCLAIMER:** This repository is intended strictly for educational purposes, password security research, and authorized security assessments. Never use these techniques against systems, accounts, or password hashes without explicit permission.
